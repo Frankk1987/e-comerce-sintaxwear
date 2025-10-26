@@ -1,0 +1,129 @@
+/* reset.css
+   Baseado no "modern-css-reset" de Andy Bell
+   Fonte de inspiração: https://github.com/andybell/modern-css-reset
+   Adaptado para uso neste projeto
+*/
+
+/* Remove estilos padrão e restaura display padrão para elementos comuns */
+:where(html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video) {
+  all: unset;
+  display: revert;
+}
+
+/* Configurações base do documento */
+html {
+  line-height: 1.15; /* melhora leitura */
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Box sizing mais previsível */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Body: ocupa toda a altura disponível e define família padrão */
+body {
+  min-block-size: 100vh;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Form controls herdam fonte do corpo */
+button, input, select, textarea {
+  font: inherit;
+}
+
+/* Links sem estilo por padrão */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Imagens e mídia responsiva */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Fieldset e legend limpos */
+fieldset {
+  border: none;
+  padding: 0;
+}
+legend {
+  padding: 0;
+}
+
+/* Acessibilidade: foco visível */
+:focus {
+  outline: 2px solid Highlight;
+  outline-offset: 2px;
+}
+
+/* Corrige comportamento de form controls em alguns browsers */
+textarea {
+  white-space: revert;
+}
+
+/* Remover aparência nativa do botão em motores WebKit, preservar função */
+button {
+  -webkit-appearance: button;
+}
+
+/* Inputs numéricos: melhor alinhamento */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+}
+
+/* Evita que elementos substituíveis quebrem o layout */
+:where(video, iframe) {
+  max-inline-size: 100%;
+}
+
+/* Pequenas utilidades seguras */
+.hidden {
+  display: none !important;
+}
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0 0 0 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
